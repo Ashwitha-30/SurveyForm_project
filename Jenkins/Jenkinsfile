@@ -16,5 +16,10 @@ pipeline{
                 sh 'hostname -I'
             }
         }
+        stage("Disk Usage"){
+            steps{
+                sh 'df -h'
+            }
+        }
     }
 }
