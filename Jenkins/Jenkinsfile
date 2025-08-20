@@ -1,17 +1,17 @@
 pipeline{
     agent any
     stages{
-        stage(CPU Details){
+        stage("CPU Details"){
             steps{
                 sh 'lscpu'
             }
         }
-        stage(Memory Details){
+        stage("Memory Details"){
             steps{
                 sh 'free -h'
             }
         }
-        stage(IP Address){
+        stage("IP Address"){
             steps{
                 sh 'hostname -I'
             }
