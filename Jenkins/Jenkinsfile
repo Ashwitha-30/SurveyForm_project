@@ -1,0 +1,20 @@
+pipeline{
+    agent any
+    stages{
+        stage(CPU Details){
+            steps{
+                sh 'lscpu'
+            }
+        }
+        stage(Memory Details){
+            steps{
+                sh 'free -h'
+            }
+        }
+        stage(IP Address){
+            steps{
+                sh 'hostname -I'
+            }
+        }
+    }
+}
